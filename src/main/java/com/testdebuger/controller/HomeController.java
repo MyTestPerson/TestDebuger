@@ -8,14 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-
     Logger logger = LoggerFactory.getLogger("This my Controller");
 
     @GetMapping(value = "/")
     public String  home () {
 
-
-
+        System.out.println();
         logger.info("info == Error Message");
         logger.debug("debug == Error Message");
         logger.trace("fatal == Error Message");
