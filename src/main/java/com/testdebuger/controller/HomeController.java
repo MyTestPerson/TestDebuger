@@ -4,12 +4,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
 
     Logger logger = LoggerFactory.getLogger("This my Controller");
 
+    @ResponseBody
     @GetMapping(value = "/")
     public String  home () {
 
@@ -20,8 +22,7 @@ public class HomeController {
         logger.error("error == Error Message");
         logger.warn("warn == Error Message");
 
-
-            return "/home";
+            return "Hello World!!";
 
     }
 
